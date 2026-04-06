@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI TikTok Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>AI TikTok Generator</h1>
+
+<form action="/generate" method="post">
+
+    <label>Reddit Link</label>
+    <input type="text" name="reddit_url" placeholder="Paste Reddit link">
+
+    <label>Choose Voice</label>
+    <select name="voice">
+        <option>Deep narrator</option>
+        <option>Energetic TikTok male</option>
+        <option>Calm storyteller</option>
+        <option>Teen male</option>
+        <option>Robotic male</option>
+        <option>Soft narrator</option>
+        <option>Energetic TikTok female</option>
+        <option>Calm female</option>
+        <option>Teen girl</option>
+        <option>Robotic female</option>
+    </select>
+
+    <label>Choose Background</label>
+    <select name="background">
+        <option>Subway Surfers</option>
+        <option>Minecraft Parkour</option>
+        <option>GTA Driving</option>
+        <option>Satisfying Sand</option>
+        <option>Slime Videos</option>
+        <option>Fortnite Gameplay</option>
+        <option>Asphalt 9 Racing</option>
+    </select>
+
+    <label>Caption Style</label>
+    <select name="captions">
+        <option>TikTok Yellow</option>
+        <option>White with Black Outline</option>
+        <option>Bold Subtitles</option>
+        <option>Auto-Sync Captions</option>
+    </select>
+
+    <button type="submit">Generate Video</button>
+</form>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
