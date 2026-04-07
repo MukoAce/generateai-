@@ -23,3 +23,15 @@ async def generate_video(
         "status": "success",
         "message": "Video generation endpoint reached successfully!"
     }
+@app.post("/generate")
+async def generate(
+    reddit_url: str = Form(...),
+    voice: str = Form(...),
+    background: str = Form(...),
+    length: int = Form(...),
+    captions: str = Form(...)
+):
+    text = extract_reddit_text(reddit_url)
+    audio = generate_tts(text)
+    generate_video(audio, text, clip_length=length)
+    return FileResponse("final.mp4", media_type="video/mp4", filename="final.mp4")
